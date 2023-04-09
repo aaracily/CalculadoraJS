@@ -52,7 +52,12 @@ function clean(){
 var bequal= document.getElementById('bequal');
 bequal.addEventListener('click',function(){calcular()});
 function calcular(){
-  
-        tresultado.value= eval(tresultado.value);
+  //para validar la operación
+  try{
+    tresultado.value= eval(tresultado.value);
+  }catch(err){
+    alert("Operación inválida");
+  }
+        
 
 }
